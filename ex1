@@ -1,0 +1,15 @@
+Erling Rennemo Jellum 10/01/2017 
+TTK4145
+Exercise 1
+3. 
+* Concurrency means that the application is processing several distinct tasks at the same time. This can be done with multicore processors or single core. Parellelism is when an application breaks up a task into several subtasks and performs them simultaneously.
+* Multicore processors are developed because we are reaching the physical limitations of single core CPUs. Heat generation+power consumption+physical size with current technology (silicon based) are restricting the maximum performance. Therefore multi core CPUs are introduced, it also makes more sense to have concurrency and parallelism on multicore CPUs.
+* Many reasons to use concurrency. With single threaded processes there is some idleness when the CPU is waiting for the last process to finish. Concurrency and parallelism can reduce this idleness. Also when using a multi-core processor it greatly enhances performance. Also because a lot of tasks should be executed simultaneously and not sequentially.
+*
+* Process: An execution stream, a sequence of instructions being executed. A process contains program code and its current activity. A process includes designated address space and a stack . A process can consist of several threads
+Threads: The basic unit of CPU utilization. Each thread is contained within a process. All threads in the same process share the same address space. Scheduled by the OS
+Green Threads: Threads scheduled by a runtime library or a VM. 
+
+*pthread_create() creates a new thread, OS managed
+threading.Thread() creates a new thread, OS managed
+go creates a co-routine
