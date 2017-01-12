@@ -10,16 +10,13 @@
 #include <stdio.h>
 
 
-pthread_mutex_t mutex;
 int i = 0;
 
 // Note the return type: void*
 void* thread1(){
     int j;
     for (j = 0; j < 1000000; j++){
-        pthread_mutex_lock(&mutex);
         i++;
-        pthread_mutex_unlock(&mutex);
     }
     return NULL;
 }
@@ -27,9 +24,7 @@ void* thread1(){
 void* thread2(){
     int j;
     for (j = 0; j < 1000000; j++){
-        pthread_mutex_lock(&mutex);
         i--;
-        pthread_mutex_unlock(&mutex);
     }
     return NULL;
 }
