@@ -1,0 +1,12 @@
+Atomic operation: An operation in which the processor both reads and writes in the same bus operation. Thus disabling  any other
+processor or I/O device from writing or reading memory until it is complete
+
+Semaphore: A semaphore is a variable used to control multiple processes access to a commen variable/function/adress space in a concurrent
+system. A counting semaphore simply holds the number of available resources and incremnents/decrements whenever a process "leaves" 
+or "enters" the shared resource
+
+Mutex/Mutual exclusion is a property of concurrency control preventing race conditions. It requireds that one thread of execution
+never enters its critical section at the same time as another thread of execution does so
+
+Critical section: Parts of the program where shared resources is accessed by several processes/threads are called the critical section
+
