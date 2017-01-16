@@ -6,14 +6,12 @@ package main
 import (
     "fmt"
     "net"
-    "time"
-    "strconv"
 )
 
 
 
 func main() {
-conn, err := net.Dial("udp", 30000)
+conn, err := net.Dial("udp", ":30000")
 if err != nil {
 	return err
 }
