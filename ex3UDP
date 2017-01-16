@@ -1,0 +1,38 @@
+//Create a simple UDP socket that is listning for messages on port 30000
+
+
+package main
+ 
+import (
+    "fmt"
+    "net"
+    "time"
+    "strconv"
+)
+
+
+
+func main() {
+conn, err := net.Dial("udp", 30000)
+if err != nil {
+	return err
+}
+defer conn.Close()
+
+//simple Read
+buffer := make([]byte, 1024)
+conn.Read(buffer)
+
+fmt.printLn(buffer)
+
+}
+
+
+  
+    
+    
+    
+    
+  
+  
+
